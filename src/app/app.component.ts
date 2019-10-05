@@ -17,9 +17,14 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Lessoni Kwa Robo',
       url: '/list',
       icon: 'list'
+    },
+    {
+      title: 'Kuhusu Nuru',
+      url: '/about',
+      icon: 'information-circle-outline'
     }
   ];
 
