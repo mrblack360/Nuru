@@ -4,19 +4,68 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="secondary">
-      <ion-button>
-        <ion-icon slot="icon-only" name="calendar"></ion-icon>
+      <ion-button
+        [routerLink]="['/home']"
+        routerLinkActive="router-link-active"
+      >
+        <ion-icon slot="icon-only" name="home"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>
       Kuhusu Nuru
     </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button color="secondary">
-        <ion-icon slot="icon-only" name="more"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      Nuru ni programu tumishi inayokuwezesha kuwa na lessoni yako uwapo na simu
+      yako.
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-subtitle>Toleo: <span>1.0.0.0</span></ion-card-subtitle
+      ><br />
+      <ion-card-subtitle
+        >Kwa maoni na ushauri, usisite kuwasiliana nasi:</ion-card-subtitle
+      >
+      <ion-card-subtitle>
+        <ion-label
+          ><ion-icon name="call"></ion-icon> +255 744 033 739</ion-label
+        >
+      </ion-card-subtitle>
+      <ion-card-subtitle>
+        <ion-label>Au tufuatilie kupitia: </ion-label>
+      </ion-card-subtitle>
+      <ion-buttons>
+        <ion-button
+          class="link"
+          color="secondary"
+          href="mailto: raphaelraphaelmm@gmail.com"
+          ><ion-icon name="mail"></ion-icon
+        ></ion-button>
+        <ion-button
+          class="link"
+          color="secondary"
+          href="https://facebook.com/raphael.raphael.165"
+          ><ion-icon name="logo-facebook"></ion-icon
+        ></ion-button>
+        <ion-button
+          class="link"
+          color="secondary"
+          href="https://twitter.com/maswimrt"
+          ><ion-icon name="logo-twitter"></ion-icon
+        ></ion-button>
+        <ion-button
+          class="link"
+          color="secondary"
+          href="mailto: raphaelraphaelmm@gmail.com"
+          ><ion-icon name="logo-linkedin"></ion-icon></ion-button></ion-buttons
+      ><br /><em>"Mungu Akubariki"</em><br /><br />
+      <ion-card-subtitle
+        >&copy; 2020 Haki Zote Zimehifadhiwa.
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
