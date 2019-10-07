@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { DatepickerComponent } from './pages/datepicker/datepicker.component';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  constructor() {}
+  constructor(public popoverController: PopoverController) {}
 
-  presentPopover(ev) {
-    const popover = Object.assign(document.createElement('ion-popover'), {
-      component: 'popover-example-page',
+  async presentPopover(ev) {
+    const popover = await this.popoverController.create({
+      component: DatepickerComponent,
       event: ev,
       translucent: true
     });
