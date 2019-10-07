@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="presentPopover($event)">
+      <ion-button (click)="datePickerPopover($event)">
         <ion-icon slot="icon-only" name="calendar"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -12,7 +12,7 @@
       Nuru
     </ion-title>
     <ion-buttons slot="end">
-      <ion-button color="secondary">
+      <ion-button (click)="morePagePopover($event)" color="secondary">
         <ion-icon slot="icon-only" name="more"></ion-icon>
       </ion-button>
     </ion-buttons>
