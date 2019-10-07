@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MorePageComponent implements OnInit {
   listItems = [
-    { name: 'Donate', icon: 'add' },
-    { name: 'Settings', icon: 'settings' }
+    { name: 'Changia', icon: 'add' },
+    { name: 'Mipangilio', icon: 'settings' }
   ];
   constructor() {}
 
