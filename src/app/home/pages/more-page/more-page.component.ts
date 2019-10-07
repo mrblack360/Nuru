@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./more-page.component.scss']
 })
 export class MorePageComponent implements OnInit {
+  listItems = [
+    { name: 'Donate', icon: 'add' },
+    { name: 'Settings', icon: 'settings' }
+  ];
   constructor() {}
 
   ngOnInit() {}
