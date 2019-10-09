@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { DatepickerComponent } from './pages/datepicker/datepicker.component';
+import { MorePageComponent } from './pages/more-page/more-page.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, DatepickerComponent, MorePageComponent],
+  entryComponents: [DatepickerComponent, MorePageComponent]
 })
 export class HomePageModule {}
