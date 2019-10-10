@@ -5,8 +5,10 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-import { DatepickerComponent } from './pages/datepicker/datepicker.component';
 import { MorePageComponent } from './pages/more-page/more-page.component';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -18,9 +20,11 @@ import { MorePageComponent } from './pages/more-page/more-page.component';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    MatFormFieldModule,
+    MatDatepickerModule
   ],
-  declarations: [HomePage, DatepickerComponent, MorePageComponent],
-  entryComponents: [DatepickerComponent, MorePageComponent]
+  declarations: [HomePage, MorePageComponent],
+  entryComponents: [MorePageComponent]
 })
 export class HomePageModule {}
