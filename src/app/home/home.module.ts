@@ -7,10 +7,6 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { MorePageComponent } from './pages/more-page/more-page.component';
 
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material';
-import { MatInputModule } from '@angular/material';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -21,10 +17,7 @@ import { MatInputModule } from '@angular/material';
         path: '',
         component: HomePage
       }
-    ]),
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatInputModule
+    ])
   ],
   declarations: [HomePage, MorePageComponent],
   entryComponents: [MorePageComponent]

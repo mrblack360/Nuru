@@ -9,8 +9,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DatePicker } from '@ionic-native/date-picker/ngx';
 import { DatePipe } from '@angular/common';
 
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule, MatNativeDateModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,10 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatNativeDateModule
+    AppRoutingModule
   ],
   providers: [
     StatusBar,

@@ -1,7 +1,7 @@
 {
-  "name": "Nuru",
+  "name": "nuru",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Maswi, MR",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -19,7 +19,6 @@
     "@angular/compiler": "~8.1.2",
     "@angular/core": "~8.1.2",
     "@angular/forms": "~8.1.2",
-    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",

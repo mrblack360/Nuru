@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  page = new FormControl();
+  myDate: Date;
   constructor(
     public popoverController: PopoverController,
     private datePicker: DatePicker,
@@ -27,20 +27,5 @@ export class HomePage {
     });
     document.body.appendChild(popover);
     return popover.present();
-  }
-  datePick() {
-    this.datePicker
-      .show({
-        date: new Date(),
-        mode: 'date',
-        androidTheme: this.datePicker.ANDROID_THEMES.THEME_HOLO_DARK
-      })
-      .then(
-        date => console.log('Got date: ', date),
-        err => console.log('Error occurred while getting date: ', err)
-      );
-  }
-  react() {
-    console.log('nimeguswa');
   }
 }
