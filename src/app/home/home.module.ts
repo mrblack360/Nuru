@@ -9,6 +9,7 @@ import { MorePageComponent } from './pages/more-page/more-page.component';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { MatFormFieldModule } from '@angular/material';
       }
     ]),
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatInputModule
   ],
   declarations: [HomePage, MorePageComponent],
   entryComponents: [MorePageComponent]
