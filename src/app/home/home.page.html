@@ -15,4 +15,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-title class="page-title">{{
+      quarteries.quarterTitle | titlecase
+    }}</ion-card-title>
+  </ion-card>
+  {{ quarteries | json }}
+</ion-content>

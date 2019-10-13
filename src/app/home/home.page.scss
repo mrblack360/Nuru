@@ -1,13 +1,8 @@
 input {
   display: none;
 }
-.mat-datepicker-content .mat-calendar {
-  opacity: 30%;
-  color: black;
-  position: abusolute;
-  right: 0px;
-}
-.cdk-overlay-container {
-  opacity: 100%;
-  color: aqua;
+
+.page-title {
+  background-color: maroon;
+  color: invert($color: maroon);
 }
