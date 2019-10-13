@@ -12,7 +12,6 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  myDate: Date;
   constructor(
     public popoverController: PopoverController,
     private datePicker: DatePicker,

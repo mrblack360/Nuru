@@ -1,23 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color="secondary"></ion-menu-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-label
-          ><ion-icon
-            slot="icon-only"
-            name="calendar"
-            color="secondary"
-          ></ion-icon
-        ></ion-label>
-        <ion-datetime
-          displayFormat="MM/DD/YYYY"
-          [(ngModel)]="myDate"
-        ></ion-datetime>
-      </ion-button>
-    </ion-buttons>
+
     <ion-title>
       Nuru
     </ion-title>
@@ -29,12 +15,4 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item>
-    <ion-label>Tarehe</ion-label>
-    <ion-datetime
-      displayFormat="MM/DD/YYYY"
-      [(ngModel)]="myDate"
-    ></ion-datetime>
-  </ion-item>
-</ion-content>
+<ion-content> </ion-content>
