@@ -13,10 +13,8 @@ import { Quarterly } from 'src/shared/interfaces/quarterly';
 })
 export class HomePage {
   quarteries: Quarterly;
-  quarterColor: string;
   constructor(
     public popoverController: PopoverController,
-    private datePicker: DatePicker,
     public datePipe: DatePipe,
     public platform: Platform,
     public quarteries$: QuarteryService
@@ -26,7 +24,6 @@ export class HomePage {
     this.quarteries$
       .getQuarteries()
       .subscribe(quarteries => (this.quarteries = quarteries));
-    this.quarterColor = this.quarteries.quarterColor;
   }
   async morePagePopover(ev) {
     const popover = await this.popoverController.create({

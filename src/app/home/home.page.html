@@ -16,10 +16,19 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-title class="page-title">{{
-      quarteries.quarterTitle | titlecase
-    }}</ion-card-title>
-  </ion-card>
-  {{ quarteries | json }}
+  <ion-toolbar class="page-title">
+    <ion-card-title class="page-title">
+      <!-- {{ quarteries.quarterTitle | titlecase }} -->
+    </ion-card-title>
+    <ion-card-subtitle>
+      <!-- {{ quarteries.weekly[0].daily[0].date | titlecase }} -->
+    </ion-card-subtitle>
+  </ion-toolbar>
+  <ion-progress-bar
+    color="secondary"
+    value="0.0"
+    buffer="0.0"
+  ></ion-progress-bar
+  ><ion-label class="loading">Please wait...</ion-label>
+  <!-- {{ quarteries | json }} -->
 </ion-content>
