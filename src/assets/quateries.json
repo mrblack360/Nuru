@@ -1,0 +1,29 @@
+{
+  "quarterId": "2019Q4",
+  "quarterColor": "maroon",
+  "quarterTitle": "Ezra Na Nehemiah",
+  "quarterIntro": "",
+  "weekly": [
+    {
+      "weekIndex": 5,
+      "dateRange": "26 October - 1 November",
+      "daily": [
+        {
+          "dayIndex": 1,
+          "dayName": "Saturday",
+          "date": "26 October",
+          "lessonTitle": "Mgawanyiko wa Sheria",
+          "pictureName": "",
+          "memoryText": ""
+        },
+        {
+          "dayIndex": 2,
+          "dayName": "Sunday",
+          "date": "27 October",
+          "lessonTitle": "Sheria",
+          "read": "In "
+        }
+      ]
+    }
+  ]
+}

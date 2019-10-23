@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./more-page.component.scss']
 })
 export class MorePageComponent implements OnInit {
+  myDate: any;
   listItems = [
-    { name: 'Donate', icon: 'add' },
-    { name: 'Settings', icon: 'settings' }
+    { name: 'Changia', icon: 'add' },
+    { name: 'Mipangilio', icon: 'settings' }
   ];
   constructor() {}
 

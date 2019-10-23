@@ -1,24 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
-import { DatepickerComponent } from './pages/datepicker/datepicker.component';
 import { MorePageComponent } from './pages/more-page/more-page.component';
-
+import { DatePicker } from '@ionic-native/date-picker/ngx';
+import { Platform } from '@ionic/angular';
+import { DatePipe } from '@angular/common';
+import { QuarteryService } from './../services/quartery.service';
+import { Quarterly } from 'src/shared/interfaces/quarterly';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  constructor(public popoverController: PopoverController) {}
-
-  async datePickerPopover(ev) {
-    const popover = await this.popoverController.create({
-      component: DatepickerComponent,
-      event: ev,
-      translucent: true
-    });
-    document.body.appendChild(popover);
-    return popover.present();
+  quarteries: Quarterly;
+  constructor(
+    public popoverController: PopoverController,
+    public datePipe: DatePipe,
+    public platform: Platform,
+    public quarteries$: QuarteryService
+  ) {}
+  // tslint:disable-next-line: use-lifecycle-interface
+  ngOnInit() {
+    this.quarteries$
+      .getQuarteries()
+      .subscribe(quarteries => (this.quarteries = quarteries));
   }
   async morePagePopover(ev) {
     const popover = await this.popoverController.create({
