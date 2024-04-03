@@ -1,7 +1,0 @@
-{
-  "name": "Nuru",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
