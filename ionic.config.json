@@ -1,0 +1,7 @@
+{
+  "name": "nuru",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
