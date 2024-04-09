@@ -7,9 +7,11 @@ import { appConfigs } from '../../configs';
   providedIn: 'root',
 })
 export class QuarterliesService {
-  constructor(private http: HttpClient) {}
   baseUrl = appConfigs.adventistBaseUrl;
   public selectedQuarterly: any;
+  public selectedLesson: any;
+
+  constructor(private http: HttpClient) {}
 
   getQuarterlies(): Observable<any> {
     return this.http.get(this.baseUrl + 'sw/quarterlies/index.json');
@@ -18,5 +20,9 @@ export class QuarterliesService {
     return this.http.get(
       this.baseUrl + 'sw/quarterlies/' + quarterId + '/index.json'
     );
+  }
+
+  getLesson(lessonId: string): Observable<any> {
+    return this.http.get(this.baseUrl + lessonId + '/index.json');
   }
 }

@@ -35,4 +35,9 @@ export class QuarterlyComponent implements OnInit {
       .locale('sw')
       .format(format ? format : 'MMMM DD');
   }
+
+  selectLesson(lesson: any) {
+    this.quarterliesService.selectedLesson = lesson;
+    this.router.navigate(['lessons/lesson']);
+  }
 }

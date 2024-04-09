@@ -31,7 +31,10 @@
     </ion-card-content>
   </ion-card>
   <ion-list lines="full">
-    <ion-item *ngFor="let lesson of quarterly.lessons; let i = index">
+    <ion-item
+      *ngFor="let lesson of quarterly.lessons"
+      (click)="selectLesson(lesson)"
+    >
       <ion-avatar slot="start">
         {{ lesson?.id | number }}
       </ion-avatar>
