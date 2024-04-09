@@ -1,6 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mwongozo wa kujifunza Biblia</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
   <ion-list lines="none">
-    <ion-item *ngFor="let quarterly of quarterlies">
+    <ion-item
+      *ngFor="let quarterly of quarterlies"
+      (click)="quarterlySelect(quarterly)"
+    >
       <img alt="" [src]="quarterly.cover" slot="start" class="cover" />
       <ion-label
         ><h1>{{ quarterly.title }}</h1>
