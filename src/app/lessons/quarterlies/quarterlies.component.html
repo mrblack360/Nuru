@@ -1,0 +1,11 @@
+<ion-content [fullscreen]="true">
+  <ion-list lines="none">
+    <ion-item *ngFor="let quarterly of quarterlies">
+      <img alt="" [src]="quarterly.cover" slot="start" class="cover" />
+      <ion-label
+        ><h1>{{ quarterly.title }}</h1>
+        <h4>{{ quarterly.human_date }}</h4></ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>
