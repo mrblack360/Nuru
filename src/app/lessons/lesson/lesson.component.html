@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar slot="fixed">
+    <ion-icon
+      name="arrow-back-outline"
+      (click)="goBack()"
+      slot="start"
+      size="large"
+    ></ion-icon>
+    <ion-title>{{
+      quarterliesService.selectedLesson?.title | titlecase
+    }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div id="container">
+    <strong>Coming soon <br /><ion-spinner name="dots"></ion-spinner></strong>
+  </div>
+  <!-- <ion-card style="margin: 0; text-align: justify">
+    <ion-img
+      [src]="quarterliesService.selectedQuarterly?.splash"
+      style="height: 100px; object-fit: cover"
+    ></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{
+        quarterliesService.selectedQuarterly?.title | titlecase
+      }}</ion-card-title>
+      <ion-card-subtitle>{{
+        quarterliesService.selectedQuarterly?.human_date
+      }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{ quarterliesService.selectedQuarterly?.introduction }}
+    </ion-card-content>
+  </ion-card>
+  <ion-list lines="full">
+    <ion-item
+      *ngFor="let lesson of quarterly.lessons"
+      (click)="selectLesson(lesson)"
+    >
+      <ion-avatar slot="start">
+        {{ lesson?.id | number }}
+      </ion-avatar>
+      <ion-label
+        ><h2>{{ lesson.title }}</h2>
+        <p>
+          {{ momentFormat(lesson?.start_date) }} -
+          {{ momentFormat(lesson?.end_date) }}
+        </p></ion-label
+      >
+    </ion-item>
+  </ion-list> -->
+</ion-content>
