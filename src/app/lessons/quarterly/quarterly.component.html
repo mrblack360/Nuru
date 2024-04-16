@@ -32,7 +32,7 @@
   </ion-card>
   <ion-list lines="full">
     <ion-item
-      *ngFor="let lesson of quarterly.lessons"
+      *ngFor="let lesson of quarterly?.lessons"
       (click)="selectLesson(lesson)"
     >
       <ion-avatar slot="start">
