@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { QuarterliesService } from 'src/app/shared/services/quarterlies/quarterlies.service';
 import * as moment from 'moment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quarterly',
@@ -11,6 +12,7 @@ import * as moment from 'moment';
 export class QuarterlyComponent implements OnInit {
   quarterly: any;
   constructor(
+    private location: Location,
     private router: Router,
     public quarterliesService: QuarterliesService
   ) {
@@ -27,7 +29,7 @@ export class QuarterlyComponent implements OnInit {
   ngOnInit() {}
 
   goBack() {
-    this.router.navigate(['lessons']);
+    this.location.back();
   }
 
   momentFormat(date: string, format?: string): string {

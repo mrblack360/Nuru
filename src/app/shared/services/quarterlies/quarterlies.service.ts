@@ -10,6 +10,7 @@ export class QuarterliesService {
   baseUrl = appConfigs.adventistBaseUrl;
   public selectedQuarterly: any;
   public selectedLesson: any;
+  public selectedLessonDetails: any;
 
   constructor(private http: HttpClient) {}
 

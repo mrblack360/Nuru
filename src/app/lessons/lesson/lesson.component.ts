@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { QuarterliesService } from 'src/app/shared/services/quarterlies/quarterlies.service';
 
 @Component({
@@ -11,20 +11,20 @@ export class LessonComponent implements OnInit {
   lesson: any;
 
   constructor(
-    private router: Router,
+    private location: Location,
     public quarterliesService: QuarterliesService
   ) {
     quarterliesService
       .getLesson(quarterliesService.selectedLesson?.path)
       .subscribe((lesson) => {
         this.lesson = lesson;
-        console.log(lesson);
+        quarterliesService.selectedLessonDetails = lesson;
       });
   }
 
   ngOnInit() {}
 
   goBack() {
-    this.router.navigate(['lessons']);
+    this.location.back();
   }
 }

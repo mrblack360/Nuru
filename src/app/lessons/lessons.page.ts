@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonsService } from '../shared/services/lessons/lessons.service';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 @Component({
   selector: 'app-lessons',
@@ -10,9 +13,9 @@ export class LessonsPage implements OnInit {
   quarterlies: any[] = [];
 
   constructor(lessonsService: LessonsService) {
-    lessonsService.getQuarterlies().subscribe((data) => {
-      this.quarterlies = data;
-    });
+    // lessonsService.getQuarterlies().subscribe((data) => {
+    //   this.quarterlies = data;
+    // });
   }
 
   ngOnInit() {}
