@@ -13,7 +13,7 @@
 </ion-header>
 <ion-content>
   <swiper-container pagination="true">
-    <swiper-slide *ngFor="let day of lesson?.days">
+    <swiper-slide *ngFor="let day of lesson?.days" style="padding: 0px 5px">
       <app-day-lesson [path]="day?.path"></app-day-lesson
     ></swiper-slide>
   </swiper-container>

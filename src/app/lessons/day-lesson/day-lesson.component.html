@@ -1,1 +1,4 @@
-<ion-content [innerHTML]="lesson?.content | sanitizedHtml"></ion-content>
+<ion-content>
+  <p>{{ formatDate(lesson?.date) }}</p>
+  <div class="content" [innerHTML]="lesson?.content | sanitizedHtml"></div>
+</ion-content>

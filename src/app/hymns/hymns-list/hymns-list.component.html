@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nyimbo za Kristo</ion-title>
+    <!-- <ion-searchbar slot="end" style="text-align: left"></ion-searchbar> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item
+      *ngFor="let title of hymnTitles?.titles | keyvalue : originalOrder"
+    >
+      <ion-label>{{ title.key + " - " + title.value }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
