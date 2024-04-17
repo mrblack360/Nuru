@@ -17,6 +17,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('./lessons/lessons.module').then((m) => m.LessonsPageModule),
   },
+  {
+    path: 'hymns',
+    loadChildren: () =>
+      import('./hymns/hymns.module').then((m) => m.HymnsPageModule),
+  },
+  {
+    path: '*',
+    redirectTo: 'lessons',
+  },
 ];
 
 @NgModule({
