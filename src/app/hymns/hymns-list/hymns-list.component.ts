@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as hymns from '../../shared/hymns.json';
 import { KeyValue } from '@angular/common';
+import { Router } from '@angular/router';
+import { HymnsService } from 'src/app/shared/services/hymns/hymns.service';
 
 @Component({
   selector: 'app-hymns-list',
@@ -11,7 +13,7 @@ export class HymnsListComponent implements OnInit {
   hymnTitles = hymns;
   hymnTitlesArray = hymns;
 
-  constructor() {}
+  constructor(private router: Router, private hymnsService: HymnsService) {}
 
   ngOnInit() {}
 
@@ -21,4 +23,9 @@ export class HymnsListComponent implements OnInit {
   ): number => {
     return 0;
   };
+
+  openHymn(key: string) {
+    this.hymnsService.setSelectedTitle(key);
+    this.router.navigate(['hymns/view']);
+  }
 }
