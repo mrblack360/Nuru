@@ -8,6 +8,8 @@
   <ion-list>
     <ion-item
       *ngFor="let title of hymnTitles?.titles | keyvalue : originalOrder"
+      (click)="openHymn(title.key)"
+      button
     >
       <ion-label>{{ title.key + " - " + title.value }}</ion-label>
     </ion-item>

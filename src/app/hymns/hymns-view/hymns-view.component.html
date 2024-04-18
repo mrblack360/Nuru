@@ -1,3 +1,45 @@
-<p>
-  hymns-view works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon
+      name="arrow-back-outline"
+      (click)="goBack()"
+      slot="start"
+      size="large"
+    ></ion-icon>
+    <ion-title>Nyimbo za Kristo</ion-title>
+    <!-- <ion-searchbar slot="end" style="text-align: left"></ion-searchbar> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card style="margin: 0; border: none; box-shadow: none">
+    <ion-card-header>
+      <ion-card-title>{{ selectedHymn.title | titlecase }}</ion-card-title>
+      <ion-card-subtitle
+        >{{ selectedHymn.author }}
+        {{
+          selectedHymn.key ? "Doh ni: " + selectedHymn.key : ""
+        }}</ion-card-subtitle
+      >
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item
+          *ngFor="let stanza of selectedHymn.stanzas | keyvalue : originalOrder"
+          ><ion-note>{{ stanza.key }}</ion-note>
+          <ion-label>{{ stanza.value }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <blockquote *ngIf="selectedHymn.choruses">
+        <h3>Chorus</h3>
+        <p
+          *ngFor="
+            let chorus of selectedHymn.choruses | keyvalue : originalOrder
+          "
+        >
+          {{ chorus.value }}
+        </p>
+      </blockquote>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
