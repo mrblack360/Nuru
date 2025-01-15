@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card border-0">
+        <div class="card-body">
+          <div class="verse d-flex align-items-center mb-3">
+            <div class="chapter-number text-center me-3">
+              {{ data?.value?.chapter_number }}
+            </div>
+            <span class="verse-text">
+              {{ data?.value?.VERSES[0]?.verse_text }}
+            </span>
+          </div>
+          <div *ngFor="let verse of data.value?.VERSES?.slice(1)" class="verse">
+            <span class="text-muted text-primary fw-bold">{{
+              verse.verse_number
+            }}</span>
+            {{ verse.verse_text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
