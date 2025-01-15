@@ -13,7 +13,7 @@
   <swiper-container pagination="true">
     <swiper-slide *ngFor="let book of bible['BIBLEBOOK'] as Book">
       <swiper-slide
-        style="padding: 0px 5px"
+        style="padding: 0px 3px"
         *ngFor="let chapter of book['CHAPTER'] | keyvalue : originalOrder"
       >
         <app-chapter-view [data]="chapter" />
