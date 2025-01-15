@@ -16,7 +16,7 @@
         style="padding: 0px 5px"
         *ngFor="let chapter of book['CHAPTER'] | keyvalue : originalOrder"
       >
-        <app-chapter-view [data]="chapter"></app-chapter-view>
+        <app-chapter-view [data]="chapter" />
       </swiper-slide>
     </swiper-slide>
   </swiper-container>

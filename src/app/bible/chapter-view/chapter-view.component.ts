@@ -7,7 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChapterViewComponent implements OnInit {
   @Input() data: any;
+  hasPreviousChapter: boolean = false;
+  hasNextChapter: boolean = false;
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Chapter details:', this.data);
+  }
+
+  previousChapter() {}
+
+  nextChapter() {}
 }

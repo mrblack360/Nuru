@@ -7,11 +7,6 @@ const routes: Routes = [
     redirectTo: 'bible',
     pathMatch: 'full',
   },
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
-  },
 
   {
     path: 'lessons',
@@ -28,6 +23,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./bible/bible.module').then((m) => m.BiblePageModule),
   },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
+  },
+
   {
     path: '*',
     redirectTo: 'lessons',

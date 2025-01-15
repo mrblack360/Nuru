@@ -8,10 +8,11 @@ import { BiblePageRoutingModule } from './bible-routing.module';
 
 import { BiblePage } from './bible.page';
 import { ChapterViewComponent } from './chapter-view/chapter-view.component';
+import { BookViewComponent } from './book-view/book-view.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, BiblePageRoutingModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  declarations: [BiblePage, ChapterViewComponent],
+  declarations: [BiblePage, BookViewComponent, ChapterViewComponent],
 })
 export class BiblePageModule {}
