@@ -25,10 +25,14 @@ interface Book {
 })
 export class BiblePage implements OnInit {
   bible: any = bible;
+  activeBook: any;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const activeBook = this.bible.BIBLEBOOK?.[0];
+    this.activeBook = activeBook;
+  }
 
   originalOrder = (
     a: KeyValue<string, string>,
@@ -36,4 +40,15 @@ export class BiblePage implements OnInit {
   ): number => {
     return 0;
   };
+
+  onReachBeginning(event: any) {}
+
+  onReachEnd(event) {}
+
+  onSlideChange(event: any) {
+    const activeIndex = event?.detail?.[0]?.activeIndex;
+    const activeBook = this.bible.BIBLEBOOK?.[activeIndex];
+    this.activeBook = activeBook;
+    console.log(activeBook);
+  }
 }
