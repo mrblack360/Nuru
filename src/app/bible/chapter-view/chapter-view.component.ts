@@ -12,9 +12,7 @@ export class ChapterViewComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log('Chapter details:', this.data);
-  }
+  ngOnInit() {}
 
   previousChapter() {}
 
