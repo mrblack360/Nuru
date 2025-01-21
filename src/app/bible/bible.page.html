@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> {{activeBook?.book_name??"Biblia"}}</ion-title>
+    <ion-icon
+      slot="end"
+      name="search-outline"
+      style="margin-right: 10px"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container
+    [pagination]="true"
+    (swiperslidechange)="onSlideChange($event)"
+  >
+    <swiper-slide swiperSlide *ngFor="let book of bible['BIBLEBOOK'] as Book">
+      <div
+        *ngFor="let chapter of book['CHAPTER'] | keyvalue : originalOrder"
+        class="px-[3px]"
+      >
+        <app-chapter-view [data]="chapter"></app-chapter-view>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

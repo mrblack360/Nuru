@@ -1,8 +1,8 @@
 {
   "name": "nuru",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Raphael Maswi",
+  "homepage": "https://maswimr.website/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -30,7 +30,7 @@
     "ionicons": "^7.0.0",
     "moment": "^2.30.1",
     "rxjs": "~7.8.0",
-    "swiper": "^11.1.1",
+    "swiper": "^11.2.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -49,6 +49,7 @@
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^48.2.1",
@@ -58,8 +59,10 @@
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "karma-jasmine": "^4.0.2",
+    "karma-jasmine-html-reporter": "^1.7.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
     "typescript": "~5.2.2"
   },
   "description": "An Ionic project"

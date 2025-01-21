@@ -1,0 +1,17 @@
+.verse {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3px;
+}
+
+.chapter-number {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.verse-text {
+  font-size: 1rem;
+}

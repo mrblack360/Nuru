@@ -1,0 +1,20 @@
+<div class="p-2">
+  <div class="rounded-lg shadow-md">
+    <div class="">
+      <div class="flex items-center mb-2">
+        <div class="chapter-number flex items-center justify-center mr-2">
+          {{ data?.value?.chapter_number }}
+        </div>
+        <span class="text-sm font-medium">
+          {{ data?.value?.VERSES?.[0]?.verse_text }}
+        </span>
+      </div>
+      <div *ngFor="let verse of data.value?.VERSES?.slice(1)" class="mb-2">
+        <span class="text-sm font-bold">
+          {{ verse.verse_number }}
+        </span>
+        {{ verse.verse_text }}
+      </div>
+    </div>
+  </div>
+</div>
