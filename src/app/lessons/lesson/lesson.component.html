@@ -34,8 +34,8 @@
     (swiperslidechange)="onSlideChange($event)"
     clickable="true"
   >
-    <swiper-slide *ngFor="let day of lesson?.days" style="padding: 0px 5px">
-      <app-day-lesson [path]="day?.path"></app-day-lesson
+    <swiper-slide *ngFor="let day of lesson?.days" class="py-10 px-2">
+      <app-day-lesson [path]="day?.path" class="pt-2"></app-day-lesson
     ></swiper-slide>
   </swiper-container>
 </ion-content>
