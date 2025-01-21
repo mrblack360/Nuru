@@ -1,4 +1,5 @@
 <ion-content>
-  <p>{{ formatDate(lesson?.date) }}</p>
-  <div class="content" [innerHTML]="lesson?.content | sanitizedHtml"></div>
+  <div class="h-screen bg-gray-100">
+    <div class="content" [innerHTML]="lesson?.content | sanitizedHtml"></div>
+  </div>
 </ion-content>

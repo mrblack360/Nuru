@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as moment from 'moment';
 import { LessonsService } from 'src/app/shared/services/lessons/lessons.service';
 
 @Component({
@@ -11,7 +10,7 @@ export class DayLessonComponent implements OnInit {
   @Input() path: any;
   lesson: any;
 
-  constructor(private lessonsService: LessonsService) {}
+  constructor(private readonly lessonsService: LessonsService) {}
 
   ngOnInit() {
     this.lessonsService.getDayLesson(this.path).subscribe(
@@ -20,9 +19,5 @@ export class DayLessonComponent implements OnInit {
       }
       // TODO: Handle exceptions here
     );
-  }
-
-  formatDate(date: string): string {
-    return moment(date, 'DD/MM/YYYY').locale('sw').format('dddd, MMMM DD');
   }
 }

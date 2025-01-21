@@ -49,6 +49,5 @@ export class BiblePage implements OnInit {
     const activeIndex = event?.detail?.[0]?.activeIndex;
     const activeBook = this.bible.BIBLEBOOK?.[activeIndex];
     this.activeBook = activeBook;
-    console.log(activeBook);
   }
 }

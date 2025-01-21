@@ -3,6 +3,7 @@
     <ion-icon
       name="arrow-back-outline"
       (click)="goBack()"
+      onkeypress="goBack()"
       slot="start"
       size="large"
     ></ion-icon>
@@ -12,7 +13,27 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <swiper-container pagination="true">
+  <div class="relative h-64">
+    <img
+      [src]="lesson?.lesson?.cover"
+      alt="Background"
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="lazy"
+    />
+    <div
+      class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center"
+    >
+      <h1 class="text-xl font-bold">
+        {{ dayDetails?.title }}
+      </h1>
+      <p class="text-sm mt-2">{{ formatDate(dayDetails?.date) }}</p>
+    </div>
+  </div>
+  <swiper-container
+    [pagination]="{ clickable: true }"
+    (swiperslidechange)="onSlideChange($event)"
+    clickable="true"
+  >
     <swiper-slide *ngFor="let day of lesson?.days" style="padding: 0px 5px">
       <app-day-lesson [path]="day?.path"></app-day-lesson
     ></swiper-slide>
