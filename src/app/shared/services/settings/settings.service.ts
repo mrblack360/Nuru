@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { Inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +9,8 @@ export class SettingsService {
   renderer: Renderer2;
 
   constructor(
-    private rendererFactory: RendererFactory2,
-    @Inject(DOCUMENT) private document: Document
+    private readonly rendererFactory: RendererFactory2,
+    @Inject(DOCUMENT) private readonly document: Document
   ) {
     this.renderer = this.rendererFactory.createRenderer(null, null);
     if (localStorage.getItem('theme')) {
@@ -28,13 +28,4 @@ export class SettingsService {
     localStorage.setItem('theme', theme);
     this.renderer.addClass(this.document.body, theme);
   }
-}
-function Inject(
-  DOCUMENT: any
-): (
-  target: typeof SettingsService,
-  propertyKey: undefined,
-  parameterIndex: 1
-) => void {
-  throw new Error('Function not implemented.');
 }

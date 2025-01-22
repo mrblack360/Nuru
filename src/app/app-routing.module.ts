@@ -24,14 +24,20 @@ const routes: Routes = [
       import('./bible/bible.module').then((m) => m.BiblePageModule),
   },
   {
-    path: 'home',
+    path: 'settings',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+      import('./settings/settings.module').then(
+        (module) => module.SettingsPageModule
+      ),
   },
-
   {
     path: '*',
     redirectTo: 'lessons',
+  },
+  {
+    path: 'settings',
+    loadChildren: () =>
+      import('./settings/settings.module').then((m) => m.SettingsPageModule),
   },
 ];
 

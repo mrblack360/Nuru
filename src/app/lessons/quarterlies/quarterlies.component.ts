@@ -11,8 +11,8 @@ export class QuarterliesComponent implements OnInit {
   quarterlies: any[] = [];
 
   constructor(
-    private quarterliesService: QuarterliesService,
-    private router: Router
+    private readonly quarterliesService: QuarterliesService,
+    private readonly router: Router
   ) {
     this.quarterliesService.getQuarterlies().subscribe(
       (quarterlies) => {
@@ -21,7 +21,6 @@ export class QuarterliesComponent implements OnInit {
       (err) => {
         console.log(err);
       }
-      // TODO: handle exceptions
     );
   }
 
