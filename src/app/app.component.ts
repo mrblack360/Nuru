@@ -10,7 +10,7 @@ export class AppComponent {
     { name: 'Biblia', icon: 'book-outline', link: 'bible' },
     { name: 'Lessoni', icon: 'school-outline', link: 'lessons' },
     { name: 'Nyimbo', icon: 'musical-notes-outline', link: 'hymns' },
-    { name: 'Zaidi', icon: 'menu-outline', link: 'home' },
+    { name: 'Zaidi', icon: 'menu-outline', link: 'settings' },
   ];
   constructor() {}
 }

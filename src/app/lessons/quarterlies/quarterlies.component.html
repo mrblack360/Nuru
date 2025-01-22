@@ -8,6 +8,7 @@
     <ion-item
       *ngFor="let quarterly of quarterlies"
       (click)="quarterlySelect(quarterly)"
+      onkeypress="quarterlySelect(quarterly)"
     >
       <img alt="" [src]="quarterly.cover" slot="start" class="cover" />
       <ion-label

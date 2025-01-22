@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
-import { SettingsService } from 'src/app/shared/services/settings/settings.service';
+import { ActionSheetController } from '@ionic/angular/standalone';
+import { SettingsService } from '../shared/services/settings/settings.service';
 
 @Component({
   selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss'],
+  templateUrl: './settings.page.html',
+  styleUrls: ['./settings.page.scss'],
 })
-export class SettingsComponent {
+export class SettingsPage {
   items: any;
 
   constructor(
-    private _actionCtrl: ActionSheetController,
-    private _settingService: SettingsService
+    private readonly _actionCtrl: ActionSheetController,
+    private readonly _settingService: SettingsService
   ) {
     this.setItems();
   }
@@ -25,7 +25,10 @@ export class SettingsComponent {
         children: [
           {
             label: 'Change Theme',
-            icon: 'moon-outline',
+            icon:
+              this._settingService.currentTheme == 'default'
+                ? 'moon-outline'
+                : 'sunny-outline',
             handler: async () => {
               if (this._settingService.currentTheme == 'default') {
                 const action = this._actionCtrl.create({
@@ -67,7 +70,6 @@ export class SettingsComponent {
               }
             },
           },
-
           {
             label: 'Help & Support',
             icon: 'help-circle-outline',

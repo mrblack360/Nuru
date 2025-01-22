@@ -1,13 +1,21 @@
 <div id="container">
   <ion-list lines="full">
     <div *ngFor="let item of items">
-      <ion-item *ngIf="item.children?.length < 1" (click)="item.handler()">
+      <ion-item
+        *ngIf="item.children?.length < 1"
+        (click)="item.handler()"
+        onkeypress="item.handler()"
+      >
         <ion-icon [name]="item?.icon" slot="start"></ion-icon>
         <ion-label>{{ item.label }}</ion-label>
       </ion-item>
 
       <ion-list *ngIf="item?.children?.length > 0">
-        <ion-list-header lines="full" (click)="item.handler()">
+        <ion-list-header
+          lines="full"
+          (click)="item.handler()"
+          onkeypress="item.handler()"
+        >
           <ion-label>{{ item.label }}</ion-label>
           <ion-icon [name]="item.icon" slot="start"></ion-icon>
         </ion-list-header>
@@ -15,6 +23,7 @@
           <ion-item
             *ngFor="let childItem of item.children"
             (click)="childItem.handler()"
+            onkeypress="childItem.handler()"
           >
             <ion-icon [name]="childItem.icon" slot="start"></ion-icon>
             <ion-label>{{ childItem.label }}</ion-label>
